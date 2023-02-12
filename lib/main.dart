@@ -15,9 +15,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
-
-
 class FaceBookApp extends StatelessWidget {
   const FaceBookApp({super.key});
 
@@ -26,29 +23,46 @@ class FaceBookApp extends StatelessWidget {
     // ignore: prefer_const_constructors
     return Scaffold(
       appBar: AppBar(
-        title: Text("FaceBook",style: TextStyle(color: Colors.blue,fontSize: 25,fontWeight:FontWeight.bold),),
+        title: Text(
+          "facebook",
+          style: TextStyle(
+            color: Colors.blue,
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+            
+          ),
+        ),
         centerTitle: true,
         leading: IconButton(
           icon: Icon(Icons.menu),
-         onPressed: () {  },
-         color: Colors.blue,
-         iconSize: 50,
-         ),
-         actions: [
-          IconButton(onPressed: () {
-            
-          }, icon:Icon(Icons.search),
+          onPressed: () {},
           color: Colors.blue,
-         iconSize: 50,),
-          IconButton(onPressed: () {
-            
-          }, icon:Icon( Icons.message),
-          color: Colors.blue,
-         iconSize: 50,)
-         ],
+          iconSize: 50,
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.search),
+            color: Colors.blue,
+            iconSize: 50,
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.message),
+            color: Colors.blue,
+            iconSize: 50,
+          )
+        ],
         backgroundColor: Colors.white,
+        elevation:10 ,
+        shadowColor: Colors.blueAccent,
       ),
-
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          
+        },
+        child: Icon(Icons.add,size: 50,),
+      ),
     );
   }
 }
